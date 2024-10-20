@@ -1,0 +1,66 @@
+export const httpMessages = {
+  "200": ["OK", "Request succeeded without error"],
+  "201": ["Created", "Resource created"],
+  "202": ["Accepted", "Request accepted"],
+  "204": ["No Content", "Resource has no content"],
+  "301": ["Moved Permanently", "Resource has been permanently moved"],
+  "302": ["Found", "Resource was found under another URI"],
+  "304": ["Not Modified", "Resource has not been modified"],
+  "400": ["Bad Request", "Request is invalid, missing parameters?"],
+  "401": ["Unauthorized", "User isn't authorized to access this resource"],
+  "402": ["Payment Required", "This code is reserved for future use."],
+  "403": [
+    "Forbidden",
+    "The server understood the request but refuses to authorize it",
+  ],
+  "404": ["Not Found", "The requested resource was not found on the server"],
+  "405": ["Method not allowed", "The HTTP method used is not allowed"],
+  "406": [
+    "Not Acceptable",
+    "The target resource does not have a current representation that would be acceptable to the user agent",
+  ],
+  "409": ["Conflict", "Request has caused a conflict"],
+  "413": [
+    "Request Entity Too Large",
+    "The webserver or proxy believes the request is too large",
+  ],
+  "429": ["Too Many Requests", "Too many requests issue within a period"],
+  "500": ["Server Error", "An error occurred on the server"],
+  "501": [
+    "Method Not Implemented",
+    "The requested method / resource isn't implemented on the server",
+  ],
+  "502": ["Connection Refused", "The connection to server was refused"],
+  "503": [
+    "Service Unavailable",
+    "The server is currently unable to handle the request due to a temporary overloading or maintenance of the server",
+  ],
+};
+
+enum HttpResponse {
+  HTTP_OK = 200,
+  HTTP_CREATED = 201,
+  HTTP_ACCEPTED = 202,
+  HTTP_NO_CONTENT = 204,
+  HTTP_MOVED_PERMANENTLY = 301,
+  HTTP_FOUND = 302,
+  HTTP_NOT_MODIFIED = 304,
+  HTTP_BAD_REQUEST = 400,
+  HTTP_UNAUTHORIZED = 401,
+  HTTP_PAYMENT_REQUIRED = 402,
+  HTTP_FORBIDDEN = 403,
+  HTTP_NOT_FOUND = 404,
+  HTTP_METHOD_NOT_ALLOWED = 405,
+  NOT_ACCEPTABLE = 406,
+  HTTP_CONFLICT = 409,
+  HTTP_TOO_LARGE = 413,
+  HTTP_TOO_MANY_REQUEST = 429,
+  HTTP_SERVER_ERROR = 500,
+  HTTP_METHOD_NOT_IMPLEMENTED = 501,
+  HTTP_CONNECTION_REFUSED = 502,
+  HTTP_SERVICE_UNAVAILABLE = 503,
+  STATUSMESSAGE = 0,
+  STATUSDESCRIPTION = 1,
+}
+
+export default HttpResponse;
