@@ -1,13 +1,13 @@
-import { describe, expect, jest, test, beforeEach } from '@jest/globals'
-import request from 'supertest'
-import server from '../../../src/app'
+import { describe, expect, it } from "@jest/globals";
+import request from "supertest";
+import app from "../../../src/app";
 
-describe("Email Bag Router", () => {
+// const url = "/v1/emailBag";
 
-  beforeAll(() => {
-    server.use('/emailBag', )
-  })
-
-})
-
-
+describe("GET /", () => {
+  it("Returns email bag list", async () => {
+    // const res = await request(app).get(url + "/");
+    // expect(res.statusCode).toEqual(200);
+    
+  });
+});

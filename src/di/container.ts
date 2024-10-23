@@ -1,21 +1,19 @@
-import 'reflect-metadata'
+import "reflect-metadata";
 import { Container } from "inversify";
 import { Types } from "./types";
 
 // Data sources
-import {
-  IDBDatasource,
-  DBDatasourceImpl,
-} from "../data/data-source/db-datasource/dbDatasource";
+import { DBDatasourceImpl } from "../data/data-source/db-datasource/dbDatasource";
+import { IDBDatasource } from "../data/interfaces/data-source/dbDatasource.interface";
 
 // domain repos
-import IEmailBagRepo from "../domain/repositories/emailBagRepo";
+import IEmailBagRepo from "../domain/repositories/emailBagRepo.interface";
 
 // data repos
-import EmailBagRepoImpl from '../data/repositories/mongodb/emailBagRepoImpl';
+import EmailBagRepoImpl from "../data/repositories/mongodb/emailBagRepoImpl";
 
 // controllers
-import EmailBagController from '../application/controllers/emailBag.controller';
+import EmailBagController from "../application/controllers/emailBag.controller";
 
 export const container = new Container({ defaultScope: "Singleton" });
 
@@ -23,7 +21,9 @@ export const container = new Container({ defaultScope: "Singleton" });
 container.bind<IDBDatasource>(Types.IDBDatasource).to(DBDatasourceImpl);
 
 // respositories
-container.bind<IEmailBagRepo>(Types.IEmailBagRepo).to(EmailBagRepoImpl)
+container.bind<IEmailBagRepo>(Types.IEmailBagRepo).to(EmailBagRepoImpl);
 
 // controllers
-container.bind<EmailBagController>(Types.EmailBagController).to(EmailBagController)
+container
+  .bind<EmailBagController>(Types.EmailBagController)
+  .to(EmailBagController);

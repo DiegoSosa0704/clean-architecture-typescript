@@ -13,3 +13,4 @@ export default interface IEmailBagRepo {
 
   deleteById(id: number | string): Promise<boolean>
 }
+

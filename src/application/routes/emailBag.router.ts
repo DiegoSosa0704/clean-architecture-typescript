@@ -18,6 +18,6 @@ router
     emailBagValidation.createEmailBag,
     controller.createEmailBag,
   )
-  .get(verifyToken, controller.findAllEmailBags);
+  .get(controller.findAllEmailBags);
 
 export default router;

@@ -1,12 +1,7 @@
-
 import { injectable } from "inversify";
 import config from "../../../config";
 import { connect } from "mongoose";
-
-
-export interface IDBDatasource {
-  connectDb(): Promise<boolean>
-}
+import { IDBDatasource } from "../../interfaces/data-source/dbDatasource.interface"
 
 @injectable()
 export class DBDatasourceImpl implements IDBDatasource {
@@ -29,6 +24,3 @@ export class DBDatasourceImpl implements IDBDatasource {
     return isConnected
   }
 }
-
-
-

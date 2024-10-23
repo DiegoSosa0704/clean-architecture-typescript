@@ -1,7 +1,7 @@
 import { describe, expect, jest, test, beforeEach } from '@jest/globals'
 import EmailBagRepoImpl from "../../../../src/data/repositories/mongodb/emailBagRepoImpl";
 import { CreateParams, EmailBagEntity, Query } from "../../../../src/domain/entities/emailBag.entity";
-import IEmailBagRepo from "../../../../src/domain/repositories/emailBagRepo";
+import IEmailBagRepo from "../../../../src/domain/repositories/emailBagRepo.interface";
 
 class MockEmailBagImpl implements IEmailBagRepo {
   isExists(name: string): Promise<boolean> {

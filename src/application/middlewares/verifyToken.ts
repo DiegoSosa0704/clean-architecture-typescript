@@ -1,5 +1,4 @@
 import { Request, Response, NextFunction } from "express";
-// import * as express from 'express';
 import ResponseMessages from "../../core/utils/constants"
 import utils from "../../core/utils/util"
 import { Token } from "../../core/types";

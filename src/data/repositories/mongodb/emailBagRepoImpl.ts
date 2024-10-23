@@ -5,8 +5,9 @@ import {
   EmailBagEntity,
   Query,
 } from "../../../domain/entities/emailBag.entity";
-import IEmailBagRepo from "../../../domain/repositories/emailBagRepo";
-import EmailBag, { Mapper } from "../../../data/models/emailBag.model";
+import IEmailBagRepo from "../../../domain/repositories/emailBagRepo.interface";
+import EmailBag from "../../../data/models/emailBag.model";
+import { Mapper } from "../../mappers/emailBag.mapper";
 
 @injectable()
 export default class EmailBagRepoImpl implements IEmailBagRepo {

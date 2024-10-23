@@ -1,4 +1,4 @@
-import { IDBDatasource } from "../../data/data-source/db-datasource/dbDatasource";
+import { IDBDatasource } from "../../data/interfaces/data-source/dbDatasource.interface";
 import { container } from "../../di/container";
 import { Types } from "../../di/types";
 

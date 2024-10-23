@@ -3,7 +3,7 @@ import { inject, injectable } from "inversify";
 
 import { Types } from "../../di/types";
 import ResponseMessages from "../../core/utils/constants";
-import IEmailBagRepo from "../../domain/repositories/emailBagRepo";
+import IEmailBagRepo from "../../domain/repositories/emailBagRepo.interface";
 import { getErrorMessage } from "../../core/utils/errorHandler";
 
 @injectable()
